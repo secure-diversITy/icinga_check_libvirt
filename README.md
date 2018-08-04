@@ -29,6 +29,8 @@
 				check definied storage pools
 				returns warning when inactive pool founded
 		
+			pool_usage
+				check pools usage
 		-w (warning)
 			Warning threshonld in percentage
 			Default: 80%
