@@ -28,7 +28,7 @@ function vm_status () {
 		esac
 	done
 
-        PERFDATA=$(echo "running_VM=$RUNNING;;, non_running_VM=$NONRUNNING;;, crashed_VM=$CRASHED;;")
+        PERFDATA=$(echo "running_VM=$RUNNING, non_running_VM=$NONRUNNING, crashed_VM=$CRASHED")
 
 	if [ "$RUNNING" -gt 0 ]
 	then
@@ -75,7 +75,7 @@ function pool_status () {
 			;;
 		esac
 	done
-	PERFDATA=$(echo "active_pools=$ACTIVEPOOL;;, inactive_pools=$INACTIVEPOOL;;")
+	PERFDATA=$(echo "active_pools=$ACTIVEPOOL, inactive_pools=$INACTIVEPOOL")
 	if [ "$INACTIVEPOOL" -gt 0 ]
 	then
 		echo "WARNING there are $INACTIVEPOOL inactive pool | $PERFDATA"
