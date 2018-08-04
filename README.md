@@ -7,7 +7,7 @@
 		
 		If all looks good put the command into your icinga/nagios
 		
-		check_libvirt -H libvirt-uri -m mode <-w warning -c critical>
+		check_libvirt -H libvirt-host -m mode <-w warning -c critical>
 		
 		-H (libvirt host)
 			The remote libvirt host
