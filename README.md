@@ -30,7 +30,7 @@
 				returns warning when inactive pool founded
 		
 			pool_usage
-				check pools usage
+				check all active pool usage
 		-w (warning)
 			Warning threshonld in percentage
 			Default: 80%
