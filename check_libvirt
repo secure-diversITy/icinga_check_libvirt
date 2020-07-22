@@ -214,8 +214,11 @@ cat <<_EOH
 	         check defined storage pools
 	         returns warning when inactive pool founded
 
+         pool_usage
+	          check all active pool usage
+
 	 net_stats
-	         retrieve network statistics (requires -i)
+	         retrieve network statistics (requires -i & -n)
 
 	-w (warning)
 	 Warning threshonld in percentage

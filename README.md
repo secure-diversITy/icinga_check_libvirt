@@ -47,6 +47,9 @@
 	        check defined storage pools
 	        returns warning when inactive pool founded
 
+            pool_usage
+		check all active pool usage
+
 	    net_stats
 	        retrieve network statistics (requires -i)
 
