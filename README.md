@@ -5,11 +5,11 @@
         install virsh on icinga/nagios host
 
 	check the nagios user can connect to remote libvirt machine
-	ex. sudo nagios virsh -c qemu+ssh://user@remote.libvirt.machine/system --readonly list
+	ex. sudo -u nagios virsh -c qemu+ssh://user@remote.libvirt.machine/system --readonly list
 
 	If all looks good put the command into your icinga/nagios
 
-	check_libvirt -H libvirt-uri -m mode <-w warning -c critical>
+	check_libvirt -H remote.libvirt.machine -m mode <-w warning -c critical>
 
 	-H (libvirt host)
 	The remote libvirt host
@@ -38,16 +38,16 @@
 	sudo -u nagios virsh -c "qemu+ssh://user@host/system" --readonly domiflist <vm-name>
 
 	-m (mode):
-	vm_status
+	    vm_status
 	        check virtual machines status (running,paused etc...)
 	        returns WARNING when one ore more VM powerwed off or paused
 	        returns CRITICAL when one or more VM crashed
 
-	pool_status
+	    pool_status
 	        check defined storage pools
 	        returns warning when inactive pool founded
 
-	net_stats
+	    net_stats
 	        retrieve network statistics (requires -i)
 
 	-w (warning)
